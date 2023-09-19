@@ -1,3 +1,5 @@
+import { Genre } from "../GenreList/types";
+
 export interface Platform {
     id: number;
     name: string;
@@ -14,4 +16,8 @@ export interface Game {
 export interface FetchGamesResponse {
     count: number;
     results: Game[]
+}
+
+export interface Props {
+    selectedGenre: Genre | null;
 }

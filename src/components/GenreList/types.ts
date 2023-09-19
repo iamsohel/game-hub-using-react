@@ -8,3 +8,7 @@ export interface FetchGenresResponse {
     count: number;
     results: Genre[]
 }
+
+export interface GenreProps {
+    onSelectedGenre: (genre: Genre) => void;
+}
