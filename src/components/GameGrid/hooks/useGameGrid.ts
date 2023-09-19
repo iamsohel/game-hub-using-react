@@ -1,8 +1,8 @@
-import { Game, Platform } from "../types";
+import { Game } from "../types";
 import useData from "../../../hooks/useData";
-import { Genre } from "../../GenreList/types";
+import { GameQuery } from "../../../App";
 
-const useGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null) => useData<Game>('/games',
-    { params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id } }, [selectedGenre?.id, selectedPlatform?.id])
+const useGames = (gameQuery: GameQuery) => useData<Game>('/games',
+    { params: { genres: gameQuery?.genre?.id, platforms: gameQuery?.platform?.id, ordering: gameQuery.sortOrder } }, [gameQuery])
 
 export default useGames;

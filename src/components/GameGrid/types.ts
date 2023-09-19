@@ -1,4 +1,4 @@
-import { Genre } from "../GenreList/types";
+import { GameQuery } from './../../App';
 
 export interface Platform {
     id: number;
@@ -19,6 +19,5 @@ export interface FetchGamesResponse {
 }
 
 export interface Props {
-    selectedGenre: Genre | null;
-    selectedPlatform: Platform | null;
+    gameQuery: GameQuery
 }
