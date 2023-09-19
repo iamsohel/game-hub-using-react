@@ -20,4 +20,5 @@ export interface FetchGamesResponse {
 
 export interface Props {
     selectedGenre: Genre | null;
+    selectedPlatform: Platform | null;
 }
