@@ -11,4 +11,5 @@ export interface FetchGenresResponse {
 
 export interface GenreProps {
     onSelectedGenre: (genre: Genre) => void;
+    selectedGenre: Genre | null
 }
